@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أمثلة على الحركات</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            margin-bottom: 30px;
+            color: #333;
+        }
+        .animation-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            margin-top: 20px;
+        }
+        .animation-box {
+            width: 100px;
+            height: 100px;
+            background-color: #EB8833;
+            border-radius: 10px;
+            margin: 10px auto;
+        }
+        .circle {
+            width: 50px;
+            height: 50px;
+            background-color: #2E5F44;
+            border-radius: 50%;
+        }
+        /* Bounce Animation */
+        @keyframes bounce {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+        .bounce {
+            animation: bounce 1s infinite;
+        }
+        /* Pulse Animation */
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        .pulse {
+            animation: pulse 1.5s infinite;
+        }
+        /* Spin Animation */
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        .spin {
+            animation: spin 1s linear infinite;
+        }
+        /* Shake Animation */
+        @keyframes shake {
+            0%, 100% {
+                transform: translateX(0);
+            }
+            25% {
+                transform: translateX(-10px);
+            }
+            50% {
+                transform: translateX(10px);
+            }
+            75% {
+                transform: translateX(-10px);
+            }
+        }
+        .shake {
+            animation: shake 0.5s ease-in-out;
+        }
+        /* Fade In Animation */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        .fade-in {
+            animation: fadeIn 2s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>أمثلة على الحركات</h1>
+
+    <div class="animation-container">
+        <!-- Bounce -->
+        <div>
+            <h3>حركة الصعود والهبوط (Bounce)</h3>
+            <div class="animation-box bounce"></div>
+        </div>
+
+        <!-- Pulse -->
+        <div>
+            <h3>حركة النبض (Pulse)</h3>
+            <div class="circle pulse"></div>
+        </div>
+
+        <!-- Spin -->
+        <div>
+            <h3>حركة الدوران (Spin)</h3>
+            <div class="circle spin"></div>
+        </div>
+
+        <!-- Shake -->
+        <div>
+            <h3>حركة الاهتزاز (Shake)</h3>
+            <div class="animation-box shake"></div>
+        </div>
+
+        <!-- Fade In -->
+        <div>
+            <h3>حركة التلاشي (Fade In)</h3>
+            <div class="animation-box fade-in"></div>
+        </div>
+    </div>
+
+</body>
+</html>
